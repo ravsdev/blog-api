@@ -1,0 +1,49 @@
+# News & Blog API
+
+API desarrollada con ExpressJS, TypeORM y PostgreSQL, para la creación de entradas de blog y noticias para un sitio web.
+
+- Almacena las imágenes en Amazon S3
+
+## Requisitos
+
+Asegúrate de tener instalado lo siguiente:
+
+- Node.js v14 o superior
+- PostgreSQL
+
+## Desarrollo
+
+En el entorno de desarrollo, se recomienda utilizar `docker-compose` para evitar la instalación manual de la base de datos.
+
+### Variables de entorno
+
+debes cofigurar el fichero .env.development con las siguientes variables de entorno:
+
+```sh
+DB_TYPE=postgres
+DB_HOST=localhost
+DB_PORT=5432
+DB_USERNAME=admin
+DB_PASSWORD=admin
+DB_DATABASE=blogapi
+```
+
+### 1. Levantar la infraestructura
+
+Ejecuta el siguiente comando en una terminal para levantar la infraestructura necesaria:
+
+```sh
+docker-compose up
+```
+
+### 2. Iniciar el servidor
+
+```sh
+npm run dev
+```
+
+### Endpoints
+
+Todos los endpoints están disponibles en: http://localhost:3000/api/v1/docs/
+
+Aquí encontrarás la documentación detallada de la API, incluyendo la información sobre cómo utilizar cada endpoint.
